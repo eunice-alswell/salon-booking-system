@@ -1,0 +1,94 @@
+body{
+    background-color: aqua;
+    margin: auto;
+    padding: auto;
+    background-image: url('/src/img/cool.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg{
+    background-color: rgba(12, 12, 12, 0.575);
+    height: inherit;
+    width: inherit;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 37px;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1px;
+    width: 60%;
+    min-height: 400px; 
+    margin: 33.3px auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
+    width: 50%;
+    min-height: 400px; 
+    margin: 33.3px auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+    padding: 10px;
+    margin: auto;
+    width:90%;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.603);
+}
+
+.btn-div{
+    text-align: center;
+    margin: 10px;
+}
+
+.form-control{
+    margin-top: 1px;
+    border: 1px solid black;
+    color: black;
+}
+
+h1{
+    text-align: center;
+}
+
+.btn{
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+}
+
+.col{
+    margin: none;
+    border: none;
+    padding: none;
+}
+
+p{
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .card {
+      width: 100%;
+    }
+    .login{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+  }
