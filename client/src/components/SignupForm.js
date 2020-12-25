@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,Row,Col,Form,Card,Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/signup.css'
+import './style/signup.css'
 
 function SignupForm() {
     return (
@@ -29,10 +29,10 @@ function SignupForm() {
 
                                 <Form.Control className ='form-control' type="password" placeholder="Password" />
                                 <div className='btn-div'>
-                                <Button className='btn' variant="primary">Signup</Button>
+                                <Button className='btn' variant="primary"><a id='a' href= '/home'>signup</a></Button>
                                 </div>
                             </Form>
-                            <p>Already have an account?<a href='/'>Login</a></p>
+                            <p>Already have an account?<a href='/login'>login</a></p>
                         </Card>
                       </Col>
                     </Row>

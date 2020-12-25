@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const bcrypt = require(bcrypt)
+const bcrypt = require('bcrypt')
 
 const userSchema = new mongoose.Schema({
     firstname:{
@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
         required: [true, 'Password is required']
     },
     role:{
-        type:String,
+        type: String,
         default:'customer',
         enum:['admin','customer']
         

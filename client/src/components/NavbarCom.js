@@ -1,13 +1,13 @@
 import React from 'react'
 import { Nav,Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/login.css'
+import './style/navbar.css'
 
 function NavbarCom() {
     return (
         <div>
             <Navbar className='nav' bg="primary" variant="dark">
-              <Navbar.Brand href="#home">Sweet-Dream</Navbar.Brand>
+              <Navbar.Brand href="#home">Sweet-Dream Salon</Navbar.Brand>
               <Nav className="mr-auto">
                 <Nav.Link href="/home">Home</Nav.Link>
                 <Nav.Link href="/about">About Us</Nav.Link>

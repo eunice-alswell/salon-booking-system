@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,Row,Col,Form,Card,Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/login.css'
+import './style/login.css'
 
 function LoginForm() {
     return (
@@ -25,7 +25,7 @@ function LoginForm() {
                                 </Form.Group>
 
                                 <div className='btn-div'>
-                                <Button className='btn' variant="primary">Login</Button>
+                                <Button className='btn' variant="primary"><a id='a' href='/home'>Login</a></Button>
                                 </div>
                             </Form>
                             <p>Are you new here?<a href='/'>Login</a></p>

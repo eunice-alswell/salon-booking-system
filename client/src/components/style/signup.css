@@ -2,7 +2,7 @@ body{
     background-color: aqua;
     margin: auto;
     padding: auto;
-    background-image: url('/src/img/cool.jpg');
+    background-image: url('../img/cool.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,12 +16,15 @@ body{
     padding-top: 30px;
     padding-bottom: 37px;
 }
+#a{
+    color: white;
+}
 
-.login{
+.signup{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 1px;
+    padding-top: 10px;
     width: 60%;
     min-height: 400px; 
     margin: 33.3px auto;
@@ -31,7 +34,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 0px;
+    padding-top: 10px;
     width: 50%;
     min-height: 400px; 
     margin: 33.3px auto;
@@ -41,9 +44,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 300px;
+    min-height: 400px;
     padding: 10px;
-    margin: auto;
+    margin:  auto;
     width:90%;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.603);
@@ -55,9 +58,14 @@ body{
 }
 
 .form-control{
-    margin-top: 1px;
+    margin-top: 15px;
+    /* border: 1px solid black; */
+}
+input{
+    margin-top: 15px;
+    width: 100%;
+    padding: 7px;
     border: 1px solid black;
-    color: black;
 }
 
 h1{
@@ -67,7 +75,6 @@ h1{
 .btn{
     width: 200px;
     border-radius: 20px;
-    border: none;
 }
 
 .col{
@@ -78,6 +85,7 @@ h1{
 
 p{
     text-align: center;
+    padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -85,7 +93,7 @@ p{
     .card {
       width: 100%;
     }
-    .login{
+    .signup{
         width: 100%;
     }
     .container{

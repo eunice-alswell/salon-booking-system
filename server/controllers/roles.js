@@ -1,16 +1,16 @@
-const accesscontrol = require('accesscontrol')
-const ac = accesscontrol()
+// const accesscontrol = require('accesscontrol')
+// const ac = accesscontrol()
 
-const roles = ()=>{
-    ac.grant("basic")
-      .readOwn("profile")
-      .updateOwn("profile")
-      .deleteOwn('profile')
+// const roles = ()=>{
+//     ac.grant("basic")
+//       .readOwn("profile")
+//       .updateOwn("profile")
+//       .deleteOwn('profile')
 
-    ac.grant("admin")
-      .extend("basic")
-      .updateAny("profile")
-      .deleteAny("profile")
-}
+//     ac.grant("admin")
+//       .extend("basic")
+//       .updateAny("profile")
+//       .deleteAny("profile")
+// }
 
-module.exports = roles
+// module.exports = roles

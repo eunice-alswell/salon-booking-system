@@ -16,3 +16,5 @@ router.get('/logot',logout)
 
 //route for update profile
 router.patch('/update-profile',updateUser)
+
+module.exports = router
