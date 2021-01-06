@@ -11,19 +11,21 @@ const handleError = () => {
     if (error.message ==="incorrect lastname"){
         err.lastname = 'this lastname does not exist'
     }
-    if (error.message ==="incorrect email"){
-        err.email = 'this email is incorrect'
-    }
-    if (error.message ==="incorrect password"){
-        err.password = 'password incorrect'
-    }
-    if (error.message ==="incorrect phone"){
-        err.phone = 'phone number is incorrect'
-    }
-    if (error.code ==="11000"){
-        err.phone = 'email has been registed'
+    if(error.message === 'incorrect username'){
+        err.username = 'that username does not exit'
     }
 
+    if (error.message === 'incorrect email'){
+        err.email = 'that email is not valid'
+    }
+
+    if (error.message === 'incorrect password'){
+        err.password = 'the password is incorrect'
+    }
+
+    if (error.code === '11000'){
+        err.email   = 'that email is registered already'
+    }
     if(error.message.includes('user validation failed')){
         Object.values(error.errors).forEach(({properties}) => {
             err[properties.path] = properties.message
@@ -40,19 +42,15 @@ const fortoken= {
 const secret = process.env.SECRET
 
 const userCtrl = {}
-
+ 
 userCtrl.signup = async(req,res)=>{
     try {
         const body = req.body
         const salt = 10
         body.password = await bcrypt.hash(body.password,salt)
-        // console.log(body)
         const newUser = new User(body)
-        // console.log(newUser)
-        const result = newUser.save()
-        // const accesstoken = jwt.sign(fortoken,secret)
-      await  res.status(200).send({message:'Account is successfully created', result})
-        
+        const result = await newUser.save()
+        res.status(200).send({message:'Account is successfully created', result})       
     } catch (error) {
         const warning = handleError(error)
         res.status(400).json({warning})
@@ -83,9 +81,7 @@ userCtrl.login = async(req,res) =>{
 userCtrl.updateUser = async(req,res)=>{
     try {
         const body = req.body
-        const username = req.body.username
-        await User.findByIdAndUpdate({username,body})
-        const user = await User.findOne(username)
+        const user = await User.findByIdAndUpdate(body)
         res.status(200).send({message:'profile has been updated',user})
     } catch (error) {
         const warning = handleError(error)

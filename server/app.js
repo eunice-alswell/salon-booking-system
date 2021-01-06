@@ -12,6 +12,7 @@ const db = process.env.DB
 const port = process.env.PORT
 // const secret = process.env.SECRET
 const userRouter = require('./routes/userRoute')
+const bookRouter = require('./routes/bookRoute')
 
 mongoose.connect(db,{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true},()=>{
     app.listen(port,()=>{
@@ -41,6 +42,8 @@ mongoose.connect(db,{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex
 app.use(express.json())
 
 app.use(userRouter)
+
+app.use(bookRouter)
 
 app.get('/',(req,res)=>{
 res.status(200).send("Welcome to well's beauty salon")

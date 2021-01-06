@@ -1,24 +1,31 @@
 const mongoose = require('mongoose')
 
 const bookingSchema = new mongoose.Schema({
-    username:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref : 'User'
-    },
-    time:{
-        type:Time,
+    name:{
+        type: String,
         required : true
     },
+    // time:{
+    //     type:Date,
+    //     required : true,
+    //     unique : true
+    // },
     date:{
         type: Date,
         required : true
     },
     email:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref : 'User'
+        type: String,
+        required : true,
+        unique : true
     },
     phone_number:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        type : String,
+        required : true,
+        unique : true
     }
 })
+
+const Book = mongoose.model('book', bookingSchema)
+
+module.exports = Book
