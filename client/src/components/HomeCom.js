@@ -3,21 +3,22 @@ import {Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/home.css'
 
-function HomeCom() {
+function HomeCom(isLogin) {
+
     return (
         <div>
             <div className='wave-container'>   
                 <div className='text'>
                     <h1>Hello, customer!</h1>
                     <p>
-                        You are welcome to Sweet-Dream Beauty and hair Salon, 
+                        You are welcome to Beauti-B Beauty and hair Salon, 
                         <br></br>
                         We offer you with nice hair style,pedicure,nice nail.
                         <br></br>
                         <h5>click on the Button to book now!!</h5>
                     </p>
                     <div className='btn-div'>
-                    <Button className='btn' variant="primary"><a id= 'a' href='/book'>Book</a></Button>
+                    <Button className='btn' variant="primary" ><a id= 'a' href='/book'>Book</a></Button>
                     </div>
                 </div>
                 {/* <div className='svg'>

@@ -1,22 +1,44 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Row,Col,Form,Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  "./style/book.css";
 
-function BookForm() {
+function BookForm( props) {
+
+  const [name, setName] = useState(''), [time, setTime]= useState(''),[date,setDate]=useState('')
+  
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    props.onSubmit({
+        id: Math.floor(Math.random() * 1000),
+        text: {
+          name:name,
+          time:time,
+          date: date
+        }
+      });
+      setName('')
+      setTime('')
+      setDate('')
+    
+}
+
+
+
+
   return (
     <div className='book'>
       <div className = 'container' >
       <div className='card'>
-        <Form>
+        <Form onSubmit = {handleSubmit}>
           <h1>Booking Form</h1>
-          <Form.Control className ='form-control' placeholder="username" required />
+          <Form.Control className ='form-control' placeholder="name" required value={name} onChange = {e=> setName(e.target.value) } />
           <Row>
               <Col>
-                <input type="time" id="appt" placeholder="--:--" required/>
+                <input type="time" id="appt" placeholder="--:--" required value = {time} onChange = {e => setTime(e.target.value)}/>
               </Col>
               <Col>
-              <input type="date" id="birthday" placeholder="mm/dd/yy" required/>
+              <input type="date" id="birthday" placeholder="mm/dd/yy" required value = {date} onChange = {e => setDate(e.target.value)} />
               </Col>
           </Row>
           <Form.Control className ='form-control' type="email" placeholder="Enter email"  required/>

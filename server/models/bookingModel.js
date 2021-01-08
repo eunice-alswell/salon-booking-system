@@ -3,7 +3,9 @@ const mongoose = require('mongoose')
 const bookingSchema = new mongoose.Schema({
     name:{
         type: String,
-        required : true
+        required : true,
+        lowercase: true,
+        
     },
     // time:{
     //     type:Date,
@@ -12,12 +14,14 @@ const bookingSchema = new mongoose.Schema({
     // },
     date:{
         type: Date,
-        required : true
+        default: Date.now,
+        required : true, 
     },
     email:{
         type: String,
         required : true,
-        unique : true
+        unique : true,
+        lowercase:true
     },
     phone_number:{
         type : String,

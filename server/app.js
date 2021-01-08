@@ -14,7 +14,7 @@ const port = process.env.PORT
 const userRouter = require('./routes/userRoute')
 const bookRouter = require('./routes/bookRoute')
 
-mongoose.connect(db,{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true},()=>{
+mongoose.connect(db,{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true,useFindAndModify:false},()=>{
     app.listen(port,()=>{
         console.info('SYSTEM HAS STARTED')
     })

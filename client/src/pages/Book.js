@@ -1,10 +1,10 @@
 import React from 'react'
-import BookForm from '../components/BookForm'
+import Booking from '../components/Booking'
 
 function Book() {
     return (
         <div>
-            <BookForm/>
+            <Booking/>
         </div>
     )
 }
