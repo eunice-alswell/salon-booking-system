@@ -196,7 +196,7 @@ The application will be available at `http://localhost:3000`
 }
 ```
 
-## 🎨 User Interface
+## User Interface
 
 The system includes:
 
@@ -206,7 +206,7 @@ The system includes:
 - **Service Catalog**: Browse available services with descriptions and pricing
 - **Staff Directory**: View available stylists and their specialties
 
-## 🔐 Security Features
+## Security Features
 
 - Password hashing with bcrypt
 - JWT-based authentication
@@ -215,7 +215,7 @@ The system includes:
 - SQL injection prevention
 - XSS protection
 
-## 🧪 Testing
+## Testing
 
 Run tests with:
 
@@ -229,7 +229,7 @@ Run tests with coverage:
 npm run test:coverage
 ```
 
-## 📊 Database Schema
+## Database Schema
 
 ### Users Table
 - id, name, email, password, role (customer/admin/staff), phone, created_at
@@ -284,7 +284,7 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/improvement`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
